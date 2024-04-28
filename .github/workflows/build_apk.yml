@@ -20,9 +20,16 @@ jobs:
 
     - name: Install Buildozer dependencies
       run: |
-        sudo apt update
-        sudo apt install -y build-essential ccache git libncurses5:i386 libstdc++6:i386 zlib1g:i386 openjdk-8-jdk unzip ant
-
+        sudo apt-get update && sudo apt-get install -yq --no-install-recommends \
+          build-essential \
+          ccache \
+          git \
+          libncurses5:i386 \
+          libstdc++6:i386 \
+          zlib1g:i386 \
+          openjdk-8-jdk \
+          unzip \
+          ant
     - name: Install Buildozer
       run: pip install --user buildozer
 
