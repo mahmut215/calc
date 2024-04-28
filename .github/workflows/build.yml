@@ -18,6 +18,11 @@ jobs:
       with:
         python-version: '3.x'  # Use the Python version compatible with Kivy and Buildozer
 
+    - name: Install distutils
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-distutils
+
     - name: Install dependencies
       run: |
         sudo apt-get install -y \
